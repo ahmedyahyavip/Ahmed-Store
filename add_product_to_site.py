@@ -1,15 +1,18 @@
-import 
+import base64
 
-email = base64.b64decode("cWF6ZWRjZWQwODJAZ21haWwuY29t").decode()
-password = base64.b64decode("Mjc3LTIwMDUtMTUxMS0tLS1BaG1lZEBAIyM=").decode()
+# 📧 بيانات الدخول (مشفرة)
+encoded_email = "cWF6ZWRjZWQwODJAZ21haWwuY29t"
+encoded_password = "Mjc3LTIwMDUtMTUxMS0tLS1BaG1lZEBAIyM="
 
+# فك التشفير
+email = base64.b64decode(encoded_email).decode()
+password = base64.b64decode(encoded_password).decode()
 # ✏️ معلومات المنتج:
 product_name = input("اسم المنتج: ").strip()
 product_price = input("السعر بالجنيه: ").strip()
 product_image_url = input("رابط صورة المنتج: ").strip()
 product_category = input("الفئة (هواتف / لابتوبات / ملحقات): ").strip().lower()
-recipient_email = input("✉️ البريد الإلكتروني (formsubmit): ").strip()
-
+recipient_email = email
 # 📦 قالب المنتج:
 product_html = f"""
 <div class="product">
