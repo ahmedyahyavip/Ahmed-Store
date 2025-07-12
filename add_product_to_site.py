@@ -1,6 +1,8 @@
-import os
+import 
+
 email = base64.b64decode("cWF6ZWRjZWQwODJAZ21haWwuY29t").decode()
 password = base64.b64decode("Mjc3LTIwMDUtMTUxMS0tLS1BaG1lZEBAIyM=").decode()
+
 # ✏️ معلومات المنتج:
 product_name = input("اسم المنتج: ").strip()
 product_price = input("السعر بالجنيه: ").strip()
