@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>متجر Ahmed🦅⚡ للإلكترونيات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { font-family: 'Tahoma', sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+    header, footer { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: #34495e; color: white; }
+    nav a { color: white; text-decoration: none; margin: 0 10px; }
+    .product-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+    .product { background: white; padding: 15px; border-radius: 8px; width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .product img { width: 100%; border-radius: 8px; }
+    .product h3 { margin: 10px 0 5px; }
+    .product .price { color: #e74c3c; font-weight: bold; }
+    .product .actions { margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .product button { flex: 1; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+    .cart-btn { background: #27ae60; color: white; }
+    .fav-btn { background: #e67e22; color: white; }
+    .share-btn { background: #3498db; color: white; }
+    footer select { padding: 5px; margin-right: 10px; }
+    footer a { color: white; margin: 0 10px; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ahmed🦅⚡ للإلكترونيات</h1>
+    <p>أفضل العروض على الإلكترونيات في مصر - الدفع عند الاستلام فقط</p>
+  </header>
+
+  <nav>
+    <div>
+      <a href="#">🏠 الصفحة الرئيسية</a>
+      <a href="#">🛒 العربة</a>
+      <a href="#">❤️ المفضلة</a>
+    </div>
+    <div>
+      <a href="#">🔐 تسجيل الدخول</a>
+    </div>
+  </nav>
+
+  <main class="product-container">
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61jLiCovxkL._AC_SX679_.jpg" alt="AirPods Black">
+      <h3>سماعة AirPods 4 - أسود</h3>
+      <p class="price">600 جنيه</p>
+      <div class="actions">
+        <button class="cart-btn">🛒 أضف إلى العربة</button>
+        <button class="fav-btn">❤️ مفضلة</button>
+        <button class="share-btn" onclick="shareProduct()">🔗 مشاركة</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61f6xjX2YJL._AC_SX679_.jpg" alt="AirPods White">
+      <h3>سماعة AirPods 4 - أبيض</h3>
+      <p class="price">450 جنيه <del style="color: gray;">600 جنيه</del></p>
+      <div class="actions">
+        <button class="cart-btn">🛒 أضف إلى العربة</button>
+        <button class="fav-btn">❤️ مفضلة</button>
+        <button class="share-btn" onclick="shareProduct()">🔗 مشاركة</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div>
+      <a href="privacy.html">سياسة الخصوصية</a> |
+      <a href="terms.html">الشروط والأحكام</a>
+      <select id="lang" onchange="changeLang()">
+        <option value="ar">العربية</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="ru">Русский</option>
+        <option value="zh">中文</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
+    <p>&copy; 2025 متجر Ahmed🦅⚡ - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    function shareProduct() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url);
+      alert("تم نسخ رابط المنتج للمشاركة.");
+    }
+
+    function changeLang() {
+      const lang = document.getElementById('lang').value;
+      alert("تم اختيار اللغة: " + lang + " (التغيير الكامل سيتوفر في النسخة القادمة)");
+    }
+  </script>
+
+</body>
+</html>
