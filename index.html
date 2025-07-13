@@ -155,7 +155,29 @@
   <h2>سماعة لاسلكية Airpods - 600ج</h2>
   <img src="https://via.placeholder.com/400x300?text=المنتج" alt="منتج">
   <div class="buttons">
-    <button onclick="showForm()">🛒 شراء المنتج</button>
+    <button onclick="showForm()">🛒 شراء المنتج</button> 
+    <div style="margin-top: 10px;">
+  <button onclick="shareOnWhatsApp()">مشاركة واتساب</button>
+  <button onclick="shareOnTwitter()">تويتر</button>
+  <button onclick="copyLink()">نسخ الرابط</button>
+</div>
+
+<script>
+  function shareOnWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://wa.me/?text=${url}`, "_blank");
+  }
+
+  function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/share?url=${url}`, "_blank");
+  }
+
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href);
+    alert("تم نسخ رابط المنتج ✅");
+  }
+</script>
     <button onclick="shareProduct()">🔗 مشاركة المنتج</button>
     <button onclick="toggleFavorite()">⭐ إضافة إلى المفضلة</button>
   </div>
