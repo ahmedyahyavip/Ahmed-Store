@@ -152,6 +152,28 @@ header {
       <h3>سماعة لاسلكية Airpods – تقليد بجودة عالية</h3>
       <p>600 جنيه</p>
       <button>شراء الآن</button>
+      <div style="margin-top: 10px;">
+  <button onclick="shareOnWhatsApp()">مشاركة واتساب</button>
+  <button onclick="shareOnTwitter()">تويتر</button>
+  <button onclick="copyLink()">نسخ الرابط</button>
+</div>
+
+<script>
+  function shareOnWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://wa.me/?text=${url}`, "_blank");
+  }
+
+  function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/share?url=${url}`, "_blank");
+  }
+
+  function copyLink() {
+    navigator.clipboard.writeText(window.location.href);
+    alert("تم نسخ رابط المنتج ✅");
+  }
+</script>
     </div>
   </section>  <!-- ====== زر واتساب عائم ====== -->  <!-- ملاحظة: استبدل رقم الهاتف أدناه بالرقم الخاص بك بصيغة دولية بدون + أو مسافات -->  <a href="https://wa.me/201234567890" class="whatsapp-button" target="_blank" rel="noopener">
     <span>تواصل معنا واتساب</span>
