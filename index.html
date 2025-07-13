@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmed 🦅⚡ Store – النسخة النهائية</title>
+  <style>
+    /* ====== الأساسيات ====== */
+    body {
+      font-family: "Tahoma", sans-serif;
+      margin: 0;
+      background: #f3f3f3;
+      line-height: 1.6;
+    }/* ====== رأس الصفحة ====== */
+header {
+  background: #131921;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #febd69;
+  white-space: nowrap;
+}
+.search-bar {
+  flex: 1 1 300px;
+  max-width: 500px;
+  margin: 8px;
+}
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ====== التصنيفات ====== */
+.categories {
+  background: #232f3e;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+.categories div {
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* ====== المنتجات ====== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+}
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+.product-card h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+.product-card p {
+  color: green;
+  font-weight: bold;
+}
+.product-card button {
+  background: #febd69;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* ====== زر واتساب عائم ====== */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-decoration: none;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease;
+}
+.whatsapp-button:hover {
+  background: #1ebe57;
+}
+
+  </style>
+</head>
+<body>  <!-- ====== رأس الصفحة ====== -->  <header>
+    <div class="logo">Ahmed 🦅⚡</div><div class="search-bar">
+  <input type="text" placeholder="ابحث عن المنتجات…" />
+</div>
+
+<div class="nav-links">
+  <a href="#">تسجيل دخول</a>
+  <a href="#">عربة الشراء 🛒</a>
+  <a href="#">طلباتي</a>
+</div>
+
+  </header>  <!-- ====== التصنيفات ====== -->  <div class="categories">
+    <div>كل المنتجات</div>
+    <div>العروض</div>
+    <div>الإلكترونيات</div>
+    <div>الموبايلات</div>
+    <div>الأجهزة المنزلية</div>
+  </div>  <!-- ====== المنتجات ====== -->  <section class="products">
+    <div class="product-card">
+      <img src="images/airpods-white.jpg" alt="سماعة Airpods بيضاء" />
+      <h3>سماعة لاسلكية Airpods – تقليد بجودة عالية</h3>
+      <p>600 جنيه</p>
+      <button>شراء الآن</button>
+    </div>
+  </section>  <!-- ====== زر واتساب عائم ====== -->  <!-- ملاحظة: استبدل رقم الهاتف أدناه بالرقم الخاص بك بصيغة دولية بدون + أو مسافات -->  <a href="https://wa.me/201234567890" class="whatsapp-button" target="_blank" rel="noopener">
+    <span>تواصل معنا واتساب</span>
+  </a></body>
+</html>
